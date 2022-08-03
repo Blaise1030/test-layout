@@ -74,7 +74,7 @@ export async function getStaticProps() {
       },
       sectionData: [
         {
-          id: 1,
+          id: 0,
           component: "Banner1",
           componentProps: {
             src: "https://upload.wikimedia.org/wikipedia/commons/6/66/Thalassodromeus_in_Japan.jpg",
@@ -86,11 +86,95 @@ export async function getStaticProps() {
           },
         },
         {
-          id: 0,
+          id: 1,
           component: "Email1",
           gridProps: {
             xs: 12,
             md: 12,
+            p: 2,
+          },
+        },
+        {
+          id: 2,
+          component: "Banner1",
+          componentProps: {
+            src: "https://upload.wikimedia.org/wikipedia/commons/6/66/Thalassodromeus_in_Japan.jpg",
+          },
+          gridProps: {
+            xs: 12,
+            md: 12,
+            p: 2,
+          },
+        },
+        {
+          id: 3,
+          component: "Email1",
+          gridProps: {
+            xs: 12,
+            md: 12,
+            p: 2,
+          },
+        },
+        {
+          id: 4,
+          component: "Banner1",
+          componentProps: {
+            src: "https://upload.wikimedia.org/wikipedia/commons/6/66/Thalassodromeus_in_Japan.jpg",
+          },
+          gridProps: {
+            xs: 12,
+            md: 12,
+            p: 2,
+          },
+        },
+        {
+          id: 5,
+          component: "Email1",
+          gridProps: {
+            xs: 12,
+            md: 12,
+            p: 2,
+          },
+        },
+        {
+          id: 6,
+          component: "Banner1",
+          componentProps: {
+            src: "https://upload.wikimedia.org/wikipedia/commons/6/66/Thalassodromeus_in_Japan.jpg",
+          },
+          gridProps: {
+            xs: 12,
+            md: 5,
+            p: 2,
+          },
+        },
+        {
+          id: 7,
+          component: "Email1",
+          gridProps: {
+            xs: 12,
+            md: 5,
+            p: 2,
+          },
+        },
+        {
+          id: 8,
+          component: "Banner1",
+          componentProps: {
+            src: "https://upload.wikimedia.org/wikipedia/commons/6/66/Thalassodromeus_in_Japan.jpg",
+          },
+          gridProps: {
+            xs: 12,
+            md: 10,
+            p: 2,
+          },
+        },
+        {
+          id: 9,
+          component: "Email1",
+          gridProps: {
+            xs: 12,
+            md: 2,
             p: 2,
           },
         },
