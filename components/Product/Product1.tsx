@@ -52,7 +52,9 @@ export default function SimilarProducts({
 
   return (
     <Stack direction="column" spacing={1} sx={{ pr: 1.5 }}>
-      <Typography variant="h6">Similar Products</Typography>
+      <Typography variant="h6" fontWeight={"bold"}>
+        Similar Products
+      </Typography>
       {isLoading && (
         <Grid container columns={12} spacing={1}>
           {[1, 2, 3, 4].map((key) => {

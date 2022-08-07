@@ -27,9 +27,6 @@ export async function getServerSideProps({ params }: any) {
     `https://mzwxudq4dacyiihtsyv3qdnbku0vopsx.lambda-url.ap-southeast-1.on.aws/?about-us=${params?.id}`
   );
 
-  // const res = await structure.json();
-  // const { message } = res;
-
   return {
     props: {
       res: {
@@ -50,10 +47,7 @@ export async function getServerSideProps({ params }: any) {
                 {
                   gridProps: { xs: 12, md: 7 },
                   blockType: "product",
-                  blockProps: {
-                    value:
-                      "<h1>HTML Ipsum Presents</h1><p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href='#'>Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>",
-                  },
+                  blockProps: {},
                 },
               ],
             },
@@ -93,6 +87,7 @@ function ComponentDecider({ gridProps, blockProps, blockType }: any) {
         product: <Product {...blockProps} />,
         grid: <InnerGrid {...blockProps} />,
         image: <Image {...blockProps} />,
+        header: <Header {...blockProps} />,
       }[blockType as string] || <></>}
     </Grid>
   );
@@ -173,5 +168,13 @@ function InnerGrid({ children }: any) {
         return <ComponentDecider key={index} {...value} />;
       })}
     </Grid>
+  );
+}
+
+function Header({ title }: { title: string }) {
+  return (
+    <Typography variant="h6" fontWeight={"bold"}>
+      {title}
+    </Typography>
   );
 }
