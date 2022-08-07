@@ -65,7 +65,7 @@ const Home: NextPage = ({ res }: any) => {
   return (
     <Box
       width={{ xs: "100vw", md: 800, lg: 1200 }}
-      sx={{ margin: "auto", pt: 5 }}
+      sx={{ margin: "auto", pt: 5, mb: 10 }}
     >
       <Grid container columns={12} spacing={{ xs: 2, md: 5, lg: 8 }}>
         {(aboutUs || [])?.map((a: any, index: number) => {

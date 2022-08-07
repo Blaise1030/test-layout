@@ -1,4 +1,4 @@
-import { Stack, Typography, Grid, Paper, Skeleton } from "@mui/material";
+import { Stack, Typography, Grid, Paper, Skeleton, Box } from "@mui/material";
 import { useState, useRef, useEffect } from "react";
 
 export default function SimilarProducts({
@@ -53,21 +53,30 @@ export default function SimilarProducts({
   return (
     <Stack direction="column" spacing={1} sx={{ pr: 1.5 }}>
       <Typography variant="h6">Similar Products</Typography>
-      <Grid container columns={12} spacing={1}>
-        {isLoading &&
-          [1, 2, 3, 4].map((key) => {
+      {isLoading && (
+        <Grid container columns={12} spacing={1}>
+          {[1, 2, 3, 4].map((key) => {
             return (
               <Grid item xs={12} md={3} key={key}>
-                <Stack direction="column" sx={{ width: "100%" }} spacing={1}>
-                  <Skeleton sx={{ width: "100%", minHeight: "300px" }} />
+                <Stack
+                  justifyContent={"start"}
+                  alignItems="start"
+                  direction="column"
+                  spacing={0.6}
+                >
+                  <Skeleton variant="rectangular" width={"100%"} height={200} />
                   <Stack direction="column" sx={{ width: "100%" }}>
-                    <Skeleton sx={{ width: "100%" }} />
-                    <Skeleton sx={{ width: "100%" }} />
+                    <Skeleton />
+                    <Skeleton width="60%" />
                   </Stack>
                 </Stack>
               </Grid>
             );
           })}
+        </Grid>
+      )}
+
+      <Grid container columns={12} spacing={1}>
         {(similarProduct || []).map(({ id, src, title, price }: any) => {
           return (
             <Grid item xs={12} md={3} key={id}>
