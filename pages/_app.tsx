@@ -8,6 +8,21 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider
       theme={createTheme({
+        components: {
+          MuiButtonBase: {
+            defaultProps: {
+              disableRipple: true,
+            },
+          },
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                boxShadow: "none",
+                textTransform: "none",
+              },
+            },
+          },
+        },
         typography: {
           fontFamily: "DM Sans",
         },

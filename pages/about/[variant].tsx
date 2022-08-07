@@ -38,7 +38,7 @@ const ComponentChooser = ({
         "rich-text": <RichText {...blockProps} />,
         image: (
           <img
-            {...blockProps}
+            {...{ ...blockProps, borderRadius: null }}
             width="100%"
             style={{ borderRadius: `${blockProps["borderRadius"] * 3}px` }}
           />
