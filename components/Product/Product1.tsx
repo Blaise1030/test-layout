@@ -19,35 +19,35 @@ export default function SimilarProducts({
 
   async function fetchData() {
     setIsLoading(true);
-    setTimeout(() => {
-      setSimilarProduct([
-        {
-          id: 0,
-          src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-          title: "Some more phone",
-          price: "RM 12",
-        },
-        {
-          id: 1,
-          src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-          title: "Some more phone",
-          price: "RM 13",
-        },
-        {
-          id: 2,
-          src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-          title: "Some more phone",
-          price: "RM 14",
-        },
-        {
-          id: 3,
-          src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
-          title: "Some more phone",
-          price: "RM 15",
-        },
-      ]);
-      setIsLoading(false);
-    }, 1000);
+    const res = await fetch("/product/1");
+
+    setSimilarProduct([
+      {
+        id: 0,
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+        title: "Some more phone",
+        price: "RM 12",
+      },
+      {
+        id: 1,
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+        title: "Some more phone",
+        price: "RM 13",
+      },
+      {
+        id: 2,
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+        title: "Some more phone",
+        price: "RM 14",
+      },
+      {
+        id: 3,
+        src: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png",
+        title: "Some more phone",
+        price: "RM 15",
+      },
+    ]);
+    setIsLoading(false);
   }
 
   return (
